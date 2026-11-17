@@ -1,0 +1,17 @@
+{
+  "name": "@portable-kiosk/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=../../.env src/server.mjs"
+  },
+  "dependencies": {
+    "express": "^5",
+    "cors": "^2",
+    "helmet": "^8",
+    "express-rate-limit": "^8",
+    "zod": "^4",
+    "pg": "^8",
+    "@supabase/supabase-js": "^2"
+  }
+}

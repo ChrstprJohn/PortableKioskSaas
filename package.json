@@ -1,0 +1,26 @@
+{
+  "name": "portable-kiosk",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "db:check": "node --env-file=.env scripts/check-supabase.mjs",
+    "db:sql": "node --env-file=.env scripts/sql.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build --workspace=@portable-kiosk/web",
+    "db:migrate": "node --env-file=.env scripts/migrate.mjs",
+    "admin:setup": "node --env-file=.env scripts/setup-admin.mjs",
+    "test:integration": "node --env-file=.env --test tests/integration.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2",
+    "pg": "^8"
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T08:28:32.883041+00:00",
+  "title": "Design System: Portable Kiosk",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Primary",
+        "canonical": "#203d31"
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Brand",
+        "canonical": "#176b58"
+      },
+      "frame": {
+        "role": "neutral",
+        "displayName": "Frame",
+        "canonical": "#f1f5f2"
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Sheet",
+        "canonical": "#ffffff"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#182923"
+      },
+      "secondary-text": {
+        "role": "neutral",
+        "displayName": "Secondary Text",
+        "canonical": "#58675f"
+      },
+      "edge": {
+        "role": "neutral",
+        "displayName": "Edge",
+        "canonical": "#e2e8e4"
+      },
+      "input-stroke": {
+        "role": "neutral",
+        "displayName": "Input Stroke",
+        "canonical": "#91a297"
+      },
+      "selected": {
+        "role": "semantic",
+        "displayName": "Selected",
+        "canonical": "#e4ebe6"
+      },
+      "accent": {
+        "role": "semantic",
+        "displayName": "Accent",
+        "canonical": "#eaf0ed"
+      },
+      "positive": {
+        "role": "semantic",
+        "displayName": "Positive",
+        "canonical": "#23613b"
+      },
+      "positive-surface": {
+        "role": "semantic",
+        "displayName": "Positive Surface",
+        "canonical": "#e9f4ed"
+      },
+      "pending": {
+        "role": "semantic",
+        "displayName": "Pending",
+        "canonical": "#7c5309"
+      },
+      "pending-surface": {
+        "role": "semantic",
+        "displayName": "Pending Surface",
+        "canonical": "#fff3d9"
+      },
+      "inactive": {
+        "role": "semantic",
+        "displayName": "Inactive",
+        "canonical": "#93403d"
+      },
+      "inactive-surface": {
+        "role": "semantic",
+        "displayName": "Inactive Surface",
+        "canonical": "#f8eded"
+      },
+      "destructive": {
+        "role": "semantic",
+        "displayName": "Destructive",
+        "canonical": "#b4232d"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Workspace headline",
+        "purpose": "Primary workspace page heading; 24px on mobile."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Everyday workspace reading."
+      },
+      "label": {
+        "displayName": "Field label",
+        "purpose": "Visible field identification."
+      },
+      "input": {
+        "displayName": "Input",
+        "purpose": "Readable field text across screen sizes."
+      }
+    },
+    "shadows": [
+      {
+        "name": "workspace-resting",
+        "value": "none",
+        "purpose": "Controls, panels, and inset workspace sheet."
+      },
+      {
+        "name": "category-picker-overlay",
+        "value": "0 8px 24px #18292318",
+        "purpose": "Temporary searchable category popover only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "reduced-duration",
+        "value": "0.01ms",
+        "purpose": "Animation and transition duration under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "sidebar-desktop-min",
+        "value": "768px"
+      },
+      {
+        "name": "branding-stack-max",
+        "value": "900px"
+      },
+      {
+        "name": "dining-stack-max",
+        "value": "600px"
+      }
+    ],
+    "media": {
+      "productPhoto": {
+        "aspectRatio": "20 / 13",
+        "intrinsicWidth": 400,
+        "intrinsicHeight": 260,
+        "objectFit": "cover",
+        "loading": "lazy",
+        "decoding": "async",
+        "missingOrFailed": "Keep slot; show neutral icon and product name."
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary button from the implemented light interface.",
+      "html": "<button class=\"ds-primary\">Save changes</button>",
+      "css": ".ds-primary{font-family:Manrope,sans-serif;font-size:14px;font-weight:600;min-height:40px;padding:8px 16px;border-radius:6px;cursor:pointer;background:var(--primary,#203d31);color:#fff;border:0}.ds-primary:hover{background:color-mix(in srgb,var(--primary,#203d31) 90%,transparent)}.ds-primary:focus-visible{outline:2px solid var(--sidebar-ring,#176b58);outline-offset:3px}.ds-primary:disabled{opacity:.5;pointer-events:none}"
+    },
+    {
+      "name": "Outline button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Outline button from the implemented light interface.",
+      "html": "<button class=\"ds-outline\">Cancel</button>",
+      "css": ".ds-outline{font-family:Manrope,sans-serif;font-size:14px;font-weight:600;min-height:40px;padding:8px 16px;border-radius:6px;cursor:pointer;background:var(--background,#fff);color:var(--foreground,#182923);border:1px solid var(--border,#e2e8e4)}.ds-outline:hover{background:#eaf0ed}.ds-outline:focus-visible{outline:2px solid var(--sidebar-ring,#176b58);outline-offset:3px}"
+    },
+    {
+      "name": "Ghost button",
+      "kind": "button",
+      "description": "Ghost button from the implemented light interface.",
+      "html": "<button class=\"ds-ghost\">Edit item</button>",
+      "css": ".ds-ghost{font-family:Manrope,sans-serif;font-size:14px;font-weight:600;min-height:40px;padding:8px 16px;border-radius:6px;cursor:pointer;background:transparent;color:var(--foreground,#182923);border:0}.ds-ghost:hover{background:#eaf0ed}.ds-ghost:focus-visible{outline:2px solid var(--sidebar-ring,#176b58);outline-offset:3px}"
+    },
+    {
+      "name": "Destructive button",
+      "kind": "button",
+      "description": "Destructive button from the implemented light interface.",
+      "html": "<button class=\"ds-delete\">Delete item</button>",
+      "css": ".ds-delete{font-family:Manrope,sans-serif;font-size:14px;font-weight:600;min-height:40px;padding:8px 16px;border-radius:6px;cursor:pointer;background:#b4232d;color:#fff;border:0}.ds-delete:hover{background:color-mix(in srgb,#b4232d 90%,transparent)}.ds-delete:focus-visible{outline:2px solid var(--sidebar-ring,#176b58);outline-offset:3px}"
+    },
+    {
+      "name": "Labeled field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labeled field from the implemented light interface.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Business name</label><input class=\"ds-input\" id=\"ds-name\" placeholder=\"Enter business name\">",
+      "css": ".ds-label{display:block;margin-bottom:8px;font:600 13px/1.5 Manrope,sans-serif;color:var(--foreground,#182923)}.ds-input{font:400 16px/1.6 Manrope,sans-serif;min-height:44px;padding:4px 12px;border:1px solid #91a297;border-radius:6px;background:transparent;color:var(--foreground,#182923);max-width:100%}.ds-input::placeholder{color:#64736c}.ds-input:focus-visible{outline:2px solid var(--sidebar-ring,#176b58);outline-offset:3px}.ds-input:user-invalid{border-color:#b4232d}"
+    },
+    {
+      "name": "Sidebar navigation",
+      "kind": "nav",
+      "description": "Sidebar navigation from the implemented light interface.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Workspace\"><a href=\"#menu\" aria-current=\"page\">Menu</a><a href=\"#branding\">Branding</a></nav>",
+      "css": ".ds-nav{background:var(--sidebar,#f1f5f2);padding:10px 14px;font:400 14px/1.6 Manrope,sans-serif}.ds-nav a{display:flex;align-items:center;min-height:42px;padding:0 12px;margin:2px 0;border-radius:6px;text-decoration:none;color:var(--sidebar-foreground,#34473d)}.ds-nav a[aria-current]{background:var(--sidebar-accent,#e4ebe6);font-weight:600;color:var(--foreground,#182923)}.ds-nav a:hover{background:var(--sidebar-accent,#e4ebe6)}.ds-nav a:focus-visible{outline:2px solid var(--sidebar-ring,#176b58);outline-offset:3px}"
+    },
+    {
+      "name": "Status badge",
+      "kind": "chip",
+      "refersTo": "status-active",
+      "description": "Status badge from the implemented light interface.",
+      "html": "<span class=\"ds-status\"><span aria-hidden=\"true\"></span>Active</span>",
+      "css": ".ds-status{display:inline-flex;align-items:center;gap:6px;font:500 11px/1.6 Manrope,sans-serif;padding:3px 8px;border-radius:4px;background:#e9f4ed;color:#23613b}.ds-status>span{width:5px;height:5px;border-radius:50%;background:currentColor}"
+    },
+    {
+      "name": "Form panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Form panel from the implemented light interface.",
+      "html": "<section class=\"ds-panel\"><h2>Business details</h2><p>Update the details shown on your kiosk.</p></section>",
+      "css": ".ds-panel{padding:28px;background:var(--card,#fff);border:1px solid var(--border,#e2e8e4);border-radius:8px;font:400 13px/1.6 Manrope,sans-serif;color:var(--foreground,#182923)}.ds-panel h2{font-size:16px;font-weight:600;margin:0 0 28px}.ds-panel p{color:var(--muted-foreground,#58675f);margin:0}"
+    },
+    {
+      "name": "Product photo fallback",
+      "kind": "custom",
+      "description": "Stable 20:13 image slot for absent or failed optional product photos.",
+      "html": "<div class=\"ds-photo\"><svg aria-hidden=\"true\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.25\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"/><path d=\"m21 15-5-5L5 21\"/></svg><span>Product name</span></div>",
+      "css": ".ds-photo{aspect-ratio:20/13;width:100%;border-radius:8px;background:#edf1ee;color:#607367;display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;overflow:hidden;font:400 13px/1.6 Manrope,sans-serif}"
+    },
+    {
+      "name": "Branding draft preview",
+      "kind": "custom",
+      "description": "Square kiosk silhouette with decorative accent top border; illustrative unsaved draft.",
+      "html": "<section class=\"ds-preview\"><header>Your business</header><h3>What sounds good?</h3><p>Your welcome message appears here.</p><div class=\"ds-preview-item\"><strong>Your menu item</strong><span>Item description</span><b>\u20b1125.00</b></div><div class=\"ds-preview-action\">Review order</div></section>",
+      "css": ".ds-preview{border:1px solid var(--border,#e2e8e4);border-top:6px solid var(--sidebar-ring,#176b58);border-radius:0;background:#f8faf7;min-height:430px;padding:24px;color:var(--foreground,#182923);font:400 14px/1.6 Manrope,sans-serif}.ds-preview header{font-weight:700;margin-bottom:36px}.ds-preview h3{font-size:23px;letter-spacing:-.02em;margin:0}.ds-preview>p{color:var(--muted-foreground,#58675f);font-size:12px;margin:12px 0 24px}.ds-preview-item{display:grid;gap:8px;background:white;padding:20px;border:1px solid var(--border,#e2e8e4);border-radius:10px}.ds-preview-item span{color:var(--muted-foreground,#58675f);font-size:12px}.ds-preview-action{background:var(--primary,#203d31);color:white;text-align:center;padding:12px;margin-top:24px;border-radius:6px;font-weight:600}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Framed Sheet",
+    "overview": "Mode: Operate. Preserve the framed-sheet direction (seed 782776925): a pale green-grey frame, white content sheet, restrained borders, and neutral navigation. It supports day-to-day business work with clear labels, compact lists, and explicit actions. The storefront mark and business-specific kiosk address/status identify each workspace.",
+    "keyCharacteristics": [
+      "Quiet green neutrals and flat surfaces.",
+      "Self-hosted Manrope for small-business owners and customer menus.",
+      "Legible status text and tabular order figures."
+    ],
+    "rules": [
+      {
+        "name": "The Fixed Contrast Rule",
+        "body": "Owner color is decorative only; controls and text retain the system palette.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do retain the pale frame, white sheet, and flat resting surfaces.",
+      "Do keep field labels visible and pair status color with text.",
+      "Do use tabular figures for money and order numbers.",
+      "Do keep owner branding decorative and fixed system contrast on controls."
+    ],
+    "donts": [
+      "Don't replace Manrope with the original developer-oriented type direction.",
+      "Don't add fabricated charts or totals.",
+      "Don't use resting shadows to distinguish workspace panels."
+    ]
+  }
+}

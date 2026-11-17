@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+coverage/
+.supabase/
+supabase/.temp/
+*.tsbuildinfo
+.impeccable/review/
+.impeccable/runtime/
+.taste-skill/
+.preview-credentials.json
+.impeccable/hook.cache.json
